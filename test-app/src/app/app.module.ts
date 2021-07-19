@@ -3,8 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FooterComponent } from './components/footer/footer.component';
-import { HeaderComponent } from './components/header/header.component';
+import { FooterModule } from './components/footer';
+import { HeaderModule } from './components/header';
 import { HomePageComponent } from './components/home-page/home-page.component';
 
 @NgModule({
@@ -15,8 +15,8 @@ import { HomePageComponent } from './components/home-page/home-page.component';
   imports: [
     BrowserModule,
     AppRoutingModule, 
-    FooterComponent, 
-    HeaderComponent
+    FooterModule, 
+    HeaderModule
   ],
   providers: [],
   bootstrap: [AppComponent]
