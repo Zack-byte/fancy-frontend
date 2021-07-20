@@ -1,0 +1,30 @@
+@import '~src/styles/_colors.scss';
+@import url('https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&display=swap');
+
+:host {
+    display: flex;
+    align-items: center;
+
+    mat-icon {
+
+        font-size: 1.5rem;
+        padding-left: 1rem;
+    }
+
+    .nav-bucket {
+        display: flex;
+        height: 10rem;
+        width: 10rem;
+        position: static;
+        top: 10rem;
+    }
+
+    button {
+        margin: 1rem;
+        color: $white;
+        font-family: 'Zen Tokyo Zoo', cursive;
+        font-size: 2rem;
+
+    }
+    
+}
