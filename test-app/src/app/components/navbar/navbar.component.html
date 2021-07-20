@@ -1,0 +1,12 @@
+<!-- NavBar shows when true-->
+<ng-container *ngIf="showNav" class="nav-bucket">
+    <button mat-button>Home</button>
+    <button mat-button>Settings</button>
+    <button mat-button>Profile</button>
+    <button mat-button>About</button>
+</ng-container>
+
+<!-- NavBar Icon -->
+<mat-icon fontSet="fa" fontIcon="{{navIcon}}" (click)="switchIcons()"></mat-icon>
+
+

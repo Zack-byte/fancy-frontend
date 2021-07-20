@@ -1,0 +1,13 @@
+import { CommonModule } from "@angular/common";
+import { NgModule } from "@angular/core";
+
+import { HomePageComponent } from "./home-page.component";
+
+@NgModule({
+    declarations: [HomePageComponent], 
+
+    exports: [HomePageComponent],
+
+    imports: [CommonModule],
+})
+export class HomePageModule {}
