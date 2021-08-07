@@ -1,14 +1,121 @@
-@import '~/src/styles/_colors.scss';
+@import '~src/styles/_colors.scss';
+@import '~src/styles/_animations.scss';
+@import url('https://fonts.googleapis.com/css2?family=Fuggles&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap');
 
 :host {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 
-    .home-container {
-        background-color: $white;
-        color: white;
-        height: 100vh;
+    .introduction {
         width: 100vw;
+        height: 100vh;
+        color: $white;
+        justify-content: center;
+        
+
+       
+
+        // ----- Animations ----- //
+        animation: fadeIn linear 3s;
+        -webkit-animation: fadeIn linear 3s;
+        -moz-animation: fadeIn linear 3s;
+        -o-animation: fadeIn linear 3s;
+        -ms-animation: fadeIn linear 3s;
+    }
+
+    .header {
+        margin: 0;
+        padding: 0;
+        top: 70vh;
+        left: 40vw;
+        position: relative;
+        font-size: 6rem;
+        font-family: 'Fuggles', cursive;
+        
+    }
+
+    .sub-header {
+        top: 20vh;
+        right: 75vw;
+        position: absolute;
+        font-size: 2rem;
+        font-family: 'Dosis', sans-serif;
 
     }
+
+    .sub-header2 {
+        top: 30vh;
+        right: 65vw;
+        position: absolute;
+        font-size: 2rem;
+        font-family: 'Dosis', sans-serif;
+    }
+
+    .sub-header3 {
+        top: 40vh; 
+        right: 45vw; 
+        position: absolute; 
+        font-size: 2rem;
+        font-family: 'Dosis', sans-serif;
+    }
+
+    @media only screen and (max-width: 1000) {
+        .introduction {
+        width: 100vw;
+        height: 100vh;
+        color: $white;
+        justify-content: center;
+        
+
+       
+
+        // ----- Animations ----- //
+        animation: fadeIn linear 3s;
+        -webkit-animation: fadeIn linear 3s;
+        -moz-animation: fadeIn linear 3s;
+        -o-animation: fadeIn linear 3s;
+        -ms-animation: fadeIn linear 3s;
+    }
+
+    .header {
+        margin: 0;
+        padding: 0;
+        top: 60vh;
+        left: 40vw;
+        position: relative;
+        font-size: 1rem;
+        font-family: 'Fuggles', cursive;
+        
+    }
+
+    .sub-header {
+        top: 20vh;
+        right: 75vw;
+        position: absolute;
+        font-size: 2rem;
+        font-family: 'Dosis', sans-serif;
+
+    }
+
+    .sub-header2 {
+        top: 30vh;
+        right: 65vw;
+        position: absolute;
+        font-size: 2rem;
+        font-family: 'Dosis', sans-serif;
+    }
+
+    .sub-header3 {
+        top: 40vh; 
+        right: 45vw; 
+        position: absolute; 
+        font-size: 2rem;
+        font-family: 'Dosis', sans-serif;
+    }
+
+    }
+
 }
