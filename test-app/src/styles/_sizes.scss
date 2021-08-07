@@ -1,9 +1,0 @@
-/* height */
-$classification-header-height: 2rem; 
-$user-header-height: 3rem; 
-$header-nav-height: 2.5rem; 
-$footer-height: 7.14rem; 
-$header-height: 7.14rem;
-$main-top-margin: $classification-header-height + $user-header-height; 
-$main-min-height: calc(100vh - #{$main-top-margin} - #{$footer-height}); 
-$row-height: 3.5rem; 
