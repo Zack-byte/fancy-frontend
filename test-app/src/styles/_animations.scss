@@ -31,17 +31,17 @@
 @keyframes ballBouncing {
     0%,
     100% {
-        transform: scale(1.5, 0.5);
+        transform: scale(2, 0.5);
     }
     20% {
         transform: scaleY(1.2)
     }
     40%,
     80% {
-        transform: translateY(-14rem);
+        transform: translateY(-26vh);
     }
     70% {
-        transform: translateY(-15rem);
+        transform: translateY(-20vh);
     }
     90% {
         transform: translateY(0);
@@ -68,3 +68,23 @@
     }
 }
 // ----- End of Components for Ball Bouncing Animation ----- //
+
+
+// ----- Expand Hover Card ----- //
+    @keyframes expandHoverCard {
+        0% {
+            height: 10%;
+            width: 10%;
+        }
+
+        50% {
+            height: 10%;
+            width: 10%;
+        }
+
+        100% {
+            height: 80%;
+            width: 70%;
+        }
+        
+    }
