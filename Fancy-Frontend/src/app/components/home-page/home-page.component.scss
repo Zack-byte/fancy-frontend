@@ -186,14 +186,4 @@
         }
         
     }
-
-    @media only screen and (max-width: 500px) {
-        h1 {
-            writing-mode: vertical-rl;
-            text-orientation: upright;
-            font-size: 3vh;
-            text-shadow: none;
-        }
-    }
-
 }
