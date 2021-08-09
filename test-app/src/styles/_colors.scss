@@ -1,0 +1,122 @@
+/*
+ * To switch rgb to hex, or hex to rgb:
+ * In Visual Studio Code, hover over the color,
+ * when the color box pops up,
+ * click on the heading of the box that contains the color text;
+ * you can click multiple times.
+ */
+
+/* white, gray, black */
+$white: rgb(255, 255, 255);
+$white-o25: rgba(255, 255, 255, 0.25);
+$white-o50: rgba(255, 255, 255, 0.5);
+$minimum-gray: rgb(249, 249, 249);
+$minimum-gray2: rgb(248, 248, 248);
+$whitesmoke: rgb(245, 245, 245);
+$another-gray: rgb(243, 243, 243);
+$lighter-gray: rgb(237, 237, 237);
+$light-gray: rgb(204, 204, 204);
+$medium-gray: rgb(156, 156, 156);
+$dark-gray: rgb(102, 102, 102);
+$darker-gray: rgb(68, 68, 68);
+$darker-gray2: rgb(51, 51, 51);
+$darker-gray3: rgb(34, 34, 34);
+$almost-black: rgb(19, 19, 19);
+$black: rgb(0, 0, 0);
+$black-o15: rgba(0, 0, 0, 0.15);
+$black-o25: rgba(0, 0, 0, 0.25);
+
+/* red dominant */
+$red: rgb(255, 0, 0);
+$sandy-brown: rgb(255, 179, 71);
+$old-lace: rgb(252, 248, 227);
+$blanched-almond: rgb(250, 242, 204);
+$khaki: rgb(250, 217, 128);
+$almost-yellow-gray: rgb(243, 242, 239);
+$almost-yellow-gray2: rgb(242, 242, 239);
+$misty-rose: rgb(242, 222, 222);
+$pink: rgb(235, 204, 204);
+$crimson: rgb(199, 21, 60);
+$fire-brick: rgb(195, 0, 8);
+$sienna: rgb(169, 68, 66);
+$dark-red: rgb(143, 13, 13);
+$leather: rgb(138, 109, 59);
+
+$yellow: rgb(255, 255, 0);
+
+/* green dominant */
+$gainsboro: rgb(223, 240, 216);
+$light-green-gray: rgb(208, 233, 198);
+$dark-sea-green: rgb(136, 193, 160);
+$forest-green: rgb(46, 167, 42);
+$green: rgb(0, 128, 0);
+$olive-green: rgb(60, 118, 61);
+
+/* blue dominant */
+$blue: rgb(0, 0, 255);
+$blue-o50: rgba(0, 0, 255, 0.5);
+$duck-egg-blue: rgb(224, 243, 248);
+$lavender: rgb(217, 237, 247);
+$powder-blue: rgb(188, 223, 241);
+$sky-blue: rgb(102, 175, 233);
+$silver: rgb(214, 215, 217);
+$cornflower-blue2: rgb(119, 158, 203);
+$cerulean: rgb(0, 113, 187);
+$purplish-gray: rgb(179, 158, 181);
+$cobalt: rgb(32, 84, 147);
+$steel-blue: rgb(49, 112, 143);
+$dim-gray: rgb(85, 89, 92);
+$dark-slate-blue: rgb(18, 46, 81);
+$midnight-blue: rgb(10, 34, 64);
+
+/* theme */
+$class-bar-red: $fire-brick;
+$unclass-bar-green: $green;
+
+$header-bg: $white;
+$header-color: $black;
+
+$main-bg: $white;
+$main-color: $dark-slate-blue;
+$content-bg: $lighter-gray;
+
+$sidebar-bg: $almost-yellow-gray;
+$sidebar-child-bg: $almost-black;
+$sidebar-color: $darker-gray2;
+$sidebar-hover-bg: $almost-yellow-gray2;
+$sidebar-hover-color: $darker-gray2;
+
+$footer-bg: $white;
+$footer-color: $black;
+
+$highlight: $khaki;
+$link-color: $cerulean;
+$lock-privilege: $crimson;
+$negative-color: $dark-red;
+$positive-color: $forest-green;
+
+$subject: $sandy-brown;
+$program: $cornflower-blue2;
+$geographical: $dark-sea-green;
+$organizational: $purplish-gray;
+
+$error-background-color: $misty-rose;
+$error-border-color: $pink;
+$error-color: $sienna;
+
+$info-background-color: $lavender;
+$info-border-color: $powder-blue;
+$info-color: $steel-blue;
+
+$input-background-color: $white;
+$input-border-color: $black-o15;
+$input-color: $dim-gray;
+$input-focus-border-color: $sky-blue;
+
+$success-background-color: $gainsboro;
+$success-border-color: $light-green-gray;
+$success-color: $olive-green;
+
+$warning-background-color: $old-lace;
+$warning-border-color: $blanched-almond;
+$warning-color: $leather

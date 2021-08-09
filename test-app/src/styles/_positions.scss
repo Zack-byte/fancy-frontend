@@ -1,0 +1,47 @@
+.toast-top-right {
+    white-space: pre-wrap; 
+}
+
+.flex-horizontal-center {
+    display: flex; 
+    justify-content: center; 
+}
+
+.flex-horizontal-right {
+    display: flex; 
+    justify-content: flex-end; 
+}
+
+.col-content{
+    display: flex; 
+    flex-direction: column; 
+    margin-right: 20px; 
+}
+
+.row-content {
+    display: flex; 
+    flex-direction: row; 
+    flex-wrap: wrap; 
+}
+
+.center-text {
+    text-align: center; 
+}
+
+.nowrap {
+    white-space: nowrap; 
+}
+
+.ellipsis {
+    overflow: hidden; 
+    white-space: nowrap; 
+    text-overflow: ellipsis; 
+}
+
+.inactive-tab-icon {
+    border-bottom-color: transparent; 
+    border-bottom-width: 3px; 
+    border-bottom-style: solid; 
+}
+
+$tagline-top-margin: 1.5rem; 

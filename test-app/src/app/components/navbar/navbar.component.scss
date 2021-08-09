@@ -1,0 +1,151 @@
+@import '~src/styles/_colors.scss';
+@import '~src/styles/_animations.scss';
+@import url('https://fonts.googleapis.com/css2?family=Hahmlet&display=swap');
+
+:host {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+
+    //----- ICONS -----//
+    .bars-icon {
+        color: $old-lace;
+        font-size: 1.5rem;
+        padding: 0.5rem;
+        padding-left: 0.6rem;
+        margin-top: 0.5rem;
+        margin-left: 0.5rem;
+        animation-name: fadeIn;
+        animation-duration: 3s;
+    }
+
+    .bars-icon:hover {
+        border-radius: 10rem;
+        background-color: grey;
+    }
+
+    .times-icon {
+        color: $black;
+        font-size: 1.5rem;
+        position: absolute;
+        top: 0;
+        padding: 0.5rem;
+        padding-right: 0.3rem;
+        padding-left: 0.7rem;
+        margin-top: 0.5rem;
+        margin-left: 0.5rem;
+        animation-name: fadeIn;
+        animation-duration: 3s;
+    }
+
+    .times-icon:hover {
+        border-radius: 10rem;
+        background-color: lightgrey;
+
+    }
+
+    .home-icon {
+        color: $black;
+        font-size: 1.5rem;
+        padding-right: 1rem;
+    }
+
+    .settings-icon {
+        color: $black;
+        font-size: 1.5rem;
+        padding-right: 1rem;
+    }
+
+    .profile-icon {
+        color: $black;
+        font-size: 1.5rem;
+        padding-right: 1rem;
+    }
+
+    .about-icon {
+        color: $black;
+        font-size: 1.5rem;
+        padding-right: 1rem;
+    }
+
+    //----- BUTTONS -----//
+
+    .home-button {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        padding-left: 4rem;
+        padding-right: 4rem;
+        background-color: transparent;
+        color: $black;
+        font-family: 'Hahmlet', serif;
+        font-size: 2rem;
+        animation: fadeIn;
+        animation-duration: 4s;
+    }
+
+    .settings-button {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        padding-left: 4rem;
+        padding-right: 4rem;
+        background-color: transparent;
+        color: $black;
+        font-family: 'Hahmlet', serif;
+        font-size: 2rem;
+        animation: fadeIn;
+        animation-duration: 4s;
+    }
+
+    .profile-button {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        padding-left: 4rem;
+        padding-right: 4rem;
+        background-color: transparent;
+        color: $black;
+        font-family: 'Hahmlet', serif;
+        font-size: 2rem;
+        animation: fadeIn;
+        animation-duration: 4s;
+    }
+
+    .about-button {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        padding-left: 4rem;
+        padding-right: 4rem;
+        background-color: transparent;
+        color: $black;
+        font-family: 'Hahmlet', serif;
+        font-size: 2rem;
+        animation: fadeIn;
+        animation-duration: 4s;
+    }
+
+
+    //----- Containers -----//
+    .nav-bucket {
+        display: flex;
+        height: 100vh;
+        width: 100vw;
+        position: static;
+        top: 10rem;
+    }
+
+    .body {
+        height: 100vh;
+        width: 100vw;
+        border-radius: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: $old-lace;
+    }
+
+    //----- DIVIDER -----//
+    mat-divider {
+        color: $black;
+        width: 13rem;
+    }
+}
