@@ -71,10 +71,26 @@
 
 
 // ----- Expand Hover Card ----- //
-    @keyframes expandHoverCard {
+    @keyframes expandAndSpinHoverCard {
         0% {
             height: 10%;
             width: 10%;
+        }
+
+        49% {
+            transform:rotate(90deg);
+        }
+
+        49.2% {
+            transform:rotate(90deg);
+        }
+
+        49.4% {
+            transform:rotate(90deg);
+        }
+
+        49.8% {
+            transform:rotate(90deg);
         }
 
         50% {
