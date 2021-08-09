@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomePageComponent implements OnInit {
 
+  public englishTitle = 'Welcome | '
+  public japaneseTitle = ' | 歓迎'
+
   constructor() { }
 
   ngOnInit(): void {

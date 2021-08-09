@@ -2,6 +2,7 @@
 @import '~src/styles/_animations.scss';
 @import url('https://fonts.googleapis.com/css2?family=Fuggles&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
 
 :host {
     display: flex;
@@ -9,113 +10,71 @@
     justify-content: center;
     align-items: center;
 
-    .introduction {
+    .title {
+        padding-right: 3vw;
+        padding-left: 3vw;
+        font-size: 10vw;
+        color: $old-lace;
+        animation: fadeIn;
+        animation-duration: 5s;
+        font-family: 'Courgette', cursive;
+    }
+
+    .card {
+        height: 30vh;
+        width: 100vw;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .ball {
+        background-color: $old-lace;
+        border-radius: 50%;
+        height: 2vh;
+        width: 2vw;
+    }
+
+    .ball-bouncing {
+        background-color: transparent;
+    }
+
+    .ball-bouncing::before {
+        animation: shadowBouncing 1.2s ease-in infinite;
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: 1rem;
+        bottom: 2rem;
+        content: '';
+        height: 0.15rem;
+        position: absolute;
+        width: 2vw;
+    }
+
+    .ball-bouncing .ball {
+        animation: ballBouncing 1.2s ease-in infinite;
+        bottom: 2.1rem;
+        transform-origin: bottom;
+    }
+
+    // ----- Move this later ----- //
+    .main-body {
+        display: flex;
+        align-items: flex-start;
+        background-color: blue;
         width: 100vw;
         height: 100vh;
-        color: $white;
-        justify-content: center;
-        
-
-       
-
-        // ----- Animations ----- //
-        animation: fadeIn linear 3s;
-        -webkit-animation: fadeIn linear 3s;
-        -moz-animation: fadeIn linear 3s;
-        -o-animation: fadeIn linear 3s;
-        -ms-animation: fadeIn linear 3s;
     }
 
-    .header {
-        margin: 0;
-        padding: 0;
-        top: 70vh;
-        left: 40vw;
-        position: relative;
-        font-size: 6rem;
-        font-family: 'Fuggles', cursive;
-        
+    // ----- Triangles ----- //
+    // TODO: Make a geometry file in styles and add common div shapes there
+
+    .triangle-arrow-right {
+        width: 0;
+        height: 0;
+        border-top: 55vw solid transparent;
+        border-bottom: 55vw solid transparent;
+        border-left: 55vw solid $dark-gray;
     }
-
-    .sub-header {
-        top: 20vh;
-        right: 75vw;
-        position: absolute;
-        font-size: 2rem;
-        font-family: 'Dosis', sans-serif;
-
-    }
-
-    .sub-header2 {
-        top: 30vh;
-        right: 65vw;
-        position: absolute;
-        font-size: 2rem;
-        font-family: 'Dosis', sans-serif;
-    }
-
-    .sub-header3 {
-        top: 40vh; 
-        right: 45vw; 
-        position: absolute; 
-        font-size: 2rem;
-        font-family: 'Dosis', sans-serif;
-    }
-
-    @media only screen and (max-width: 1000) {
-        .introduction {
-        width: 100vw;
-        height: 100vh;
-        color: $white;
-        justify-content: center;
-        
-
-       
-
-        // ----- Animations ----- //
-        animation: fadeIn linear 3s;
-        -webkit-animation: fadeIn linear 3s;
-        -moz-animation: fadeIn linear 3s;
-        -o-animation: fadeIn linear 3s;
-        -ms-animation: fadeIn linear 3s;
-    }
-
-    .header {
-        margin: 0;
-        padding: 0;
-        top: 60vh;
-        left: 40vw;
-        position: relative;
-        font-size: 1rem;
-        font-family: 'Fuggles', cursive;
-        
-    }
-
-    .sub-header {
-        top: 20vh;
-        right: 75vw;
-        position: absolute;
-        font-size: 2rem;
-        font-family: 'Dosis', sans-serif;
-
-    }
-
-    .sub-header2 {
-        top: 30vh;
-        right: 65vw;
-        position: absolute;
-        font-size: 2rem;
-        font-family: 'Dosis', sans-serif;
-    }
-
-    .sub-header3 {
-        top: 40vh; 
-        right: 45vw; 
-        position: absolute; 
-        font-size: 2rem;
-        font-family: 'Dosis', sans-serif;
-    }
-
-    }
-
 }

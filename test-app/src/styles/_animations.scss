@@ -23,3 +23,48 @@
     0% {opacity: 0;}
     100% {opacity: 1;}
 }
+// ----- End of Generic Fade In Animation ----- //
+
+
+
+// ----- Components for Ball Bouncing Animation ----- //
+@keyframes ballBouncing {
+    0%,
+    100% {
+        transform: scale(1.5, 0.5);
+    }
+    20% {
+        transform: scaleY(1.2)
+    }
+    40%,
+    80% {
+        transform: translateY(-14rem);
+    }
+    70% {
+        transform: translateY(-15rem);
+    }
+    90% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes shadowBouncing {
+    0%, 
+    100% {
+        transform: scale(2, 0.8);
+    }
+    20% {
+        transform: scale(1.2, 0.8);
+    }
+    40%,
+    80% {
+        transform: scale(0.5, 0.2);
+    }
+    70% {
+        transform: scale(0.5, 0.15);
+    }
+    90% {
+        transform: scale(1.5, 0.6)
+    }
+}
+// ----- End of Components for Ball Bouncing Animation ----- //
