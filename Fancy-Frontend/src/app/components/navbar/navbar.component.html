@@ -1,38 +1,51 @@
 <!-- NavBar shows when true-->
 <div *ngIf="!toggle" [@slideInOut] class="nav-bucket" >
     <div class="body">
-        <div class="sub-container">
+
+        <div class="sub-container-home">
             <button class="home-button" mat-button>
                 <mat-icon class="home-icon" fontSet="fa" fontIcon="fa-home"></mat-icon> 
                 Home
             </button>
         </div>
+        <div class="hero-text-home">
+            Home
+        </div>
 
         <mat-divider></mat-divider>
 
-        <div class="sub-container">
+        <div class="sub-container-settings">
             <button class="settings-button" mat-button>
                 <mat-icon class="settings-icon" fontSet="fa" fontIcon="fa-cogs"></mat-icon>
                 Settings
             </button>
         </div>
+        <div class="hero-text-settings">
+            Settings
+        </div>
 
         <mat-divider></mat-divider>
 
-        <div class="sub-container">
+        <div class="sub-container-profile">
             <button class="profile-button" mat-button>
                 <mat-icon class="profile-icon" fontSet="fa" fontIcon="fa-user"></mat-icon>
                 Profile
             </button>
         </div>
+        <div class="hero-text-profile">
+            Profile
+        </div>
 
         <mat-divider></mat-divider>
 
-        <div class="sub-container">
+        <div class="sub-container-about">
             <button class="about-button" mat-button>
                 <mat-icon class="about-icon" fontSet="fa" fontIcon="fa-address-card"></mat-icon>
                 About
             </button>
+        </div>
+        <div class="hero-text-about">
+            About
         </div>
     </div>
 </div>

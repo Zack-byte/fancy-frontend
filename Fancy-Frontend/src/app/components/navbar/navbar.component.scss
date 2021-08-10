@@ -36,6 +36,7 @@
         margin-left: 0.5rem;
         animation-name: fadeIn;
         animation-duration: 3s;
+        z-index: 999;
     }
 
     .times-icon:hover {
@@ -140,11 +141,79 @@
         align-items: center;
         justify-content: center;
         background-color: $old-lace;
+        z-index: 10;
+    }
+
+    // ----- Hero Text & SubContainers ----- //
+
+    .sub-container-home {
+        z-index: 100;
+    }
+
+    .sub-container-settings {
+        z-index: 100;
+    }
+
+    .subcontainer-profile {
+        z-index: 100;
+    }
+
+    .subcontainer-about {
+        z-index: 100;
+    }
+
+    .hero-text-home {
+        display: none;
+    }
+
+    .hero-text-settings {
+        display: none;
+    }
+
+    .hero-text-profile {
+        display: none;
+    }
+
+    .hero-text-about {
+        display: none;
+    }
+
+    .sub-container-home:hover + .hero-text-home {
+        display: block;
+        font-size: 30vw;
+        color: lightslategray;
+        position: absolute;
+        z-index: 50;
+    }
+
+    .sub-container-settings:hover + .hero-text-settings {
+        display: block;
+        font-size: 30vw;
+        color: lightslategray;
+        position: absolute;
+        z-index: 50;
+    }
+
+    .sub-container-profile:hover + .hero-text-profile {
+        display: block;
+        font-size: 30vw;
+        color: lightslategray;
+        position: absolute;
+        z-index: 50;
+    }
+
+    .sub-container-about:hover + .hero-text-about {
+        display: block;
+        font-size: 30vw;
+        color: lightslategray;
+        position: absolute;
+        z-index: 50;
     }
 
     //----- DIVIDER -----//
     mat-divider {
         color: $black;
         width: 13rem;
+        z-index: 100;
     }
 }
