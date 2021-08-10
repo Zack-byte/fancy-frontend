@@ -8,7 +8,7 @@ ng build --prod --base-href "fancy-frontend"
 npx angular-cli-ghpages --dir=dist/fancy-frontend
 ```
 
-TODO: 
+# TODO: 
 ## Master Task: Finish Styling The Homepage
         - extract some css elements into their own styles file
             - basic geometry and such
