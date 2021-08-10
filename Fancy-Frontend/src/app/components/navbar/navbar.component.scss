@@ -27,7 +27,8 @@
     .times-icon {
         color: $black;
         font-size: 1.5rem;
-        position: absolute;
+        position: fixed;
+        overflow: hidden;
         top: 0;
         padding: 0.5rem;
         padding-right: 0.3rem;
@@ -108,6 +109,7 @@
         font-size: 2rem;
         animation: fadeIn;
         animation-duration: 4s;
+        z-index: 999;
     }
 
     .about-button {
@@ -121,6 +123,7 @@
         font-size: 2rem;
         animation: fadeIn;
         animation-duration: 4s;
+        z-index: 999;
     }
 
 
@@ -142,6 +145,8 @@
         justify-content: center;
         background-color: $old-lace;
         z-index: 10;
+        position: fixed;
+        overflow: hidden;
     }
 
     // ----- Hero Text & SubContainers ----- //
@@ -184,6 +189,8 @@
         color: lightslategray;
         position: absolute;
         z-index: 50;
+        animation: fadeIn;
+        animation-duration: 1.5s;
     }
 
     .sub-container-settings:hover + .hero-text-settings {
@@ -192,6 +199,8 @@
         color: lightslategray;
         position: absolute;
         z-index: 50;
+        animation: fadeIn;
+        animation-duration: 1.5s;
     }
 
     .sub-container-profile:hover + .hero-text-profile {
@@ -200,6 +209,8 @@
         color: lightslategray;
         position: absolute;
         z-index: 50;
+        animation: fadeIn;
+        animation-duration: 1.5s;
     }
 
     .sub-container-about:hover + .hero-text-about {
@@ -208,6 +219,25 @@
         color: lightslategray;
         position: absolute;
         z-index: 50;
+        animation: fadeIn;
+        animation-duration: 1.5s;
+    }
+
+    //----- Glass Hover Card -----//
+    .glass-hover-card {
+        height: 66vh;
+        width: 22vw;
+        position: absolute;
+        margin-left: 1rem;
+        border-radius: .5rem;
+        box-shadow: 0 0 1rem 0 rgb( 0 0 0 / 20%);
+        z-index: 60;
+    }
+
+    .glass-hover-card:before {
+        background-color: rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(100px) saturate(100%) contrast(45%) brightness(130%);
+        z-index: 60;
     }
 
     //----- DIVIDER -----//
