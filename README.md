@@ -9,7 +9,7 @@ npx angular-cli-ghpages --dir=dist/fancy-frontend
 ```
 
 TODO: 
-    ## Master Task: Finish Styling The Homepage
+## Master Task: Finish Styling The Homepage
         - extract some css elements into their own styles file
             - basic geometry and such
         - think and restructure current home-page architecture for scalability
