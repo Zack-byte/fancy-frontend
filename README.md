@@ -18,8 +18,7 @@ npx angular-cli-ghpages --dir=dist/fancy-frontend
         - research navbar functionality
             - I want the navbar to take up the whole screen and the only way it can be left is if the user clicks the x
                 - currently its limited in size and the user can scroll out of the navbar
-
-        ** fix buggy navbar Profile and About hero text
+        - Clean up Navbar hover
                 
 
 
