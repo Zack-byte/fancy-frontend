@@ -1,6 +1,13 @@
 # Fancy-Frontend
 First Attempt at making a Responsive Website that will help with experience and portfolio building
 
+## For GitHub Pages
+```cmd
+ng build --prod --base-href "fancy-frontend"
+
+npx angular-cli-ghpages --dir=dist/fancy-frontend
+```
+
 TODO: 
     ## Master Task: Finish Styling The Homepage
         - extract some css elements into their own styles file
