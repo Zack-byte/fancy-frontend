@@ -4,246 +4,107 @@
 
 :host {
     position: absolute;
-    height: 100vh;
-    width: 100vw;
+    height: 10%;
+    width: 100%;
 
     //----- ICONS -----//
-    .bars-icon {
-        color: $old-lace;
-        font-size: 1.5rem;
+    .arrow-icon {
+        color: $site-secondary;
+        font-size: 1.7rem;
         padding: 0.5rem;
         padding-left: 0.6rem;
         margin-top: 0.5rem;
         margin-left: 0.5rem;
-        animation-name: fadeIn;
-        animation-duration: 3s;
     }
 
-    .bars-icon:hover {
-        border-radius: 10rem;
-        background-color: grey;
+    @keyframes arrowBounce {
+      0% {
+        transform: translateY(-10px);
+      }
+      16.667% {
+        transform: translateY(-6.5px);
+      }
+      33.333% {
+        transform: translateY(-3.5px);
+      }
+      50% {
+        transform: translateY(0px);
+      }
+      66.667% {
+        transform: translateY(-3.5px);
+      }
+      83.333% {
+        transform: translateY(-6.5px);
+      }
+      100% {
+        transform: translateY(-10px);
+      }
     }
 
-    .times-icon {
-        color: $black;
-        font-size: 1.5rem;
-        position: fixed;
-        overflow: hidden;
-        top: 0;
+    .arrow-icon:hover {
+      cursor: pointer;
+      text-shadow: -4px 3px 0 #3a50d9, -9px 7px 0 #0a0e27;
+      animation: arrowBounce 1.5s infinite linear;
+    }
+
+    .nav-base {
+      width: 30%;
+      height: 90%;
+      margin-top: 1rem;
+      display: flex;
+      border-radius: 30px;
+      align-items: center;
+      justify-content: center;
+      background-color: $site-secondary;
+      -webkit-box-shadow: 1px 1px 10px #333;
+      -moz-box-shadow:    1px 1px 10px #333;
+      box-shadow:         1px 1px 10px #333;
+    }
+
+    .nav-buttons {
+      display: flex;
+
+      .nav-button {
+        margin: 1rem;
+        border: none;
+        margin-left: 0;
+        margin-right: 2.5rem;
         padding: 0.5rem;
-        padding-right: 0.3rem;
-        padding-left: 0.7rem;
-        margin-top: 0.5rem;
-        margin-left: 0.5rem;
-        animation-name: fadeIn;
-        animation-duration: 3s;
-        z-index: 999;
+        border-radius: 25px;
+        background-color: $site-secondary;
+
+        mat-icon {
+          color: $site-primary;
+          font-size: 1.2rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+
+      .nav-button:nth-child(4) {
+        margin-right: 0;
+      }
+
+      .nav-button:hover {
+        cursor: pointer;
+        -webkit-box-shadow:  1px 1px 10px #333;
+        -moz-box-shadow:     1px 1px 10px #333;
+        box-shadow:          1px 1px 10px #333;
+      }
     }
 
-    .times-icon:hover {
-        border-radius: 10rem;
-        background-color: lightgrey;
-
-    }
-
-    .home-icon {
-        color: $black;
-        font-size: 1.5rem;
-        padding-right: 1rem;
-    }
-
-    .settings-icon {
-        color: $black;
-        font-size: 1.5rem;
-        padding-right: 1rem;
-    }
-
-    .profile-icon {
-        color: $black;
-        font-size: 1.5rem;
-        padding-right: 1rem;
-    }
-
-    .about-icon {
-        color: $black;
-        font-size: 1.5rem;
-        padding-right: 1rem;
-    }
-
-    //----- BUTTONS -----//
-
-    .home-button {
-        padding-top: 2rem;
-        padding-bottom: 2rem;
-        padding-left: 4rem;
-        padding-right: 4rem;
-        background-color: transparent;
-        color: $black;
-        font-family: 'Hahmlet', serif;
-        font-size: 2rem;
-        animation: fadeIn;
-        animation-duration: 4s;
-    }
-
-    .settings-button {
-        padding-top: 2rem;
-        padding-bottom: 2rem;
-        padding-left: 4rem;
-        padding-right: 4rem;
-        background-color: transparent;
-        color: $black;
-        font-family: 'Hahmlet', serif;
-        font-size: 2rem;
-        animation: fadeIn;
-        animation-duration: 4s;
-    }
-
-    .profile-button {
-        padding-top: 2rem;
-        padding-bottom: 2rem;
-        padding-left: 4rem;
-        padding-right: 4rem;
-        background-color: transparent;
-        color: $black;
-        font-family: 'Hahmlet', serif;
-        font-size: 2rem;
-        animation: fadeIn;
-        animation-duration: 4s;
-        z-index: 999;
-    }
-
-    .about-button {
-        padding-top: 2rem;
-        padding-bottom: 2rem;
-        padding-left: 4rem;
-        padding-right: 4rem;
-        background-color: transparent;
-        color: $black;
-        font-family: 'Hahmlet', serif;
-        font-size: 2rem;
-        animation: fadeIn;
-        animation-duration: 4s;
-        z-index: 999;
-    }
-
-
-    //----- Containers -----//
     .nav-bucket {
-        display: flex;
-        height: 100vh;
-        width: 100vw;
-        position: static;
-        top: 10rem;
-    }
+      display: flex;
+      height: 100%;
+      position: static;
+      top: 10rem;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
 
-    .body {
-        height: 100vh;
-        width: 100vw;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        background-color: $old-lace;
-        z-index: 10;
-        position: fixed;
-        overflow: hidden;
-    }
-
-    // ----- Hero Text & SubContainers ----- //
-
-    .sub-container-home {
-        z-index: 100;
-    }
-
-    .sub-container-settings {
-        z-index: 100;
-    }
-
-    .subcontainer-profile {
-        z-index: 100;
-    }
-
-    .subcontainer-about {
-        z-index: 100;
-    }
-
-    .hero-text-home {
-        display: none;
-    }
-
-    .hero-text-settings {
-        display: none;
-    }
-
-    .hero-text-profile {
-        display: none;
-    }
-
-    .hero-text-about {
-        display: none;
-    }
-
-    .sub-container-home:hover + .hero-text-home {
-        display: block;
-        font-size: 30vw;
-        color: lightslategray;
-        position: absolute;
-        z-index: 50;
-        animation: fadeIn;
-        animation-duration: 1.5s;
-    }
-
-    .sub-container-settings:hover + .hero-text-settings {
-        display: block;
-        font-size: 30vw;
-        color: lightslategray;
-        position: absolute;
-        z-index: 50;
-        animation: fadeIn;
-        animation-duration: 1.5s;
-    }
-
-    .sub-container-profile:hover + .hero-text-profile {
-        display: block;
-        font-size: 30vw;
-        color: lightslategray;
-        position: absolute;
-        z-index: 50;
-        animation: fadeIn;
-        animation-duration: 1.5s;
-    }
-
-    .sub-container-about:hover + .hero-text-about {
-        display: block;
-        font-size: 30vw;
-        color: lightslategray;
-        position: absolute;
-        z-index: 50;
-        animation: fadeIn;
-        animation-duration: 1.5s;
-    }
-
-    //----- Glass Hover Card -----//
-    .glass-hover-card {
-        height: 66vh;
-        width: 22vw;
-        position: absolute;
-        margin-left: 1rem;
-        border-radius: .5rem;
-        box-shadow: 0 0 1rem 0 rgb( 0 0 0 / 20%);
-        z-index: 60;
-    }
-
-    .glass-hover-card:before {
-        background-color: rgba(255, 255, 255, 0.3);
-        backdrop-filter: blur(100px) saturate(100%) contrast(45%) brightness(130%);
-        z-index: 60;
-    }
-
-    //----- DIVIDER -----//
-    mat-divider {
-        color: $black;
-        width: 13rem;
-        z-index: 100;
+      .tooltip {
+        background: white;
+      }
     }
 }

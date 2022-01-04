@@ -1,189 +1,179 @@
 @import '~src/styles/_colors.scss';
 @import '~src/styles/_animations.scss';
-@import url('https://fonts.googleapis.com/css2?family=Fuggles&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Style+Script&display=swap');
 
 :host {
+  width: 100%;
+  height: 100%;
+
+  .home-page {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .center {
+    width: 80%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .center-text {
+      width: 50%;
+      height: 80%;
+      cursor: default;
+      display: flex;
+      flex-direction: column;
+      align-items: baseline;
+      justify-content: space-around;
+      color: $site-secondary;
+      font-weight: bold;
+      font-style: italic;
+      font-size: 7rem;
+      padding: 1rem;
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+      text-shadow: -4px 3px 0 #3a50d9, -14px 7px 0 #0a0e27;
+
+      :first-child {
+        display: flex;
+        align-items: baseline;
+      }
+
+      .second-container {
+        display: flex;
+        position: relative;
+        left: 10rem;
+        top: 1.5rem;
+
+        div {
+          display: flex;
+          margin-right: 2rem;
+        }
+      }
+    }
+  }
+
+  .dot-container {
+    margin-right: 2rem;
+    margin-left: 1rem;
+  }
+
+
+  .dot-typing {
+    position: relative;
+    left: -9999px;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: $site-secondary;
+    color: $site-secondary;
+    box-shadow: 9984px 0 0 0 $site-secondary, 9999px 0 0 0 $site-secondary, 10014px 0 0 0 $site-secondary;
+
+  }
+
+  .center:hover {
+    .dot-typing {
+      animation: dotTyping 1.5s infinite linear;
+    }
+  }
+
+  @keyframes dotTyping {
+    0% {
+      box-shadow: 9984px 0 0 0 $site-secondary, 9999px 0 0 0 $site-secondary, 10014px 0 0 0 $site-secondary;
+    }
+    16.667% {
+      box-shadow: 9984px -10px 0 0 $site-secondary, 9999px 0 0 0 $site-secondary, 10014px 0 0 0 $site-secondary;
+    }
+    33.333% {
+      box-shadow: 9984px 0 0 0 $site-secondary, 9999px 0 0 0 $site-secondary, 10014px 0 0 0 $site-secondary;
+    }
+    50% {
+      box-shadow: 9984px 0 0 0 $site-secondary, 9999px -10px 0 0 $site-secondary, 10014px 0 0 0 $site-secondary;
+    }
+    66.667% {
+      box-shadow: 9984px 0 0 0 $site-secondary, 9999px 0 0 0 $site-secondary, 10014px 0 0 0 $site-secondary;
+    }
+    83.333% {
+      box-shadow: 9984px 0 0 0 $site-secondary, 9999px 0 0 0 $site-secondary, 10014px -10px 0 0 $site-secondary;
+    }
+    100% {
+      box-shadow: 9984px 0 0 0 $site-secondary, 9999px 0 0 0 $site-secondary, 10014px 0 0 0 $site-secondary;
+    }
+  }
+
+  .main-image {
+    width: 20rem;
+    border-radius: 100px;
+    position: relative;
+    top: -1rem;
+    z-index: 999;
+    animation: imageBounce 2s infinite linear;
+  }
+
+  @keyframes imageBounce {
+    0% {
+      transform: translateY(-10px);
+    }
+    16.667% {
+      transform: translateY(-6.5px);
+    }
+    33.333% {
+      transform: translateY(-3.5px);
+    }
+    50% {
+      transform: translateY(0px);
+    }
+    66.667% {
+      transform: translateY(-3.5px);
+    }
+    83.333% {
+      transform: translateY(-6.5px);
+    }
+    100% {
+      transform: translateY(-10px);
+    }
+  }
+
+  .image-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 
-    .title {
-        padding-right: 3vw;
-        padding-left: 3vw;
-        font-size: 10vw;
-        color: $old-lace;
-        animation: fadeIn;
-        animation-duration: 5s;
-        font-family: 'Courgette', cursive;
+    .image-shadow {
+      background-color: rgb(11, 11, 11, .39);
+      border-radius: 20px;
+      position: relative;
+      top: -4rem;
+      right: 0.5rem;
+      height: 2rem;
+      border-radius: 50%;
+      animation: shadowBounce 2s infinite linear;
     }
 
-    .card {
-        height: 30vh;
-        width: 100vw;
-        position: relative;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
+    @keyframes shadowBounce {
+      0% {
+        width: 3rem;
+      }
+      16.667% {
+        width: 5.5rem;
+      }
+      33.333% {
+        width: 7.5rem;
+      }
+      50% {
+        width: 9rem;
+      }
+      66.667% {
+        width: 7.5rem;
+      }
+      83.333% {
+        width: 5.5rem;
+      }
+      100% {
+        width: 3rem;
+      }
     }
-
-    .ball {
-        background-color: $old-lace;
-        border-radius: 50%;
-        height: 2vh;
-        width: 2vw;
-    }
-
-    .ball-bouncing {
-        background-color: transparent;
-    }
-
-    .ball-bouncing::before {
-        animation: shadowBouncing 1.2s ease-in infinite;
-        background-color:$old-lace;
-        border-radius: 2rem;
-        bottom: 14vh;
-        content: '';
-        height: .15rem;
-        position: absolute;
-        right: 48.4vw;
-        width: 1vw;
-    }
-
-    .ball-bouncing .ball {
-        animation: ballBouncing 1.2s ease-in infinite;
-        bottom: 3rem;
-        transform-origin: bottom;
-    }
-
-    // ----- First Section ----- //
-    .main-body {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        background-color: transparent;
-        width: 100vw;
-        height: 50vh;
-        overflow: hidden;
-        animation: fadeIn;
-        animation-duration: 4s;
-    }
-
-    .section-two {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
-        background-color: transparent;
-        width: 100vw;
-        height: 50vh;
-        animation: fadeIn;
-        animation-duration: 4s;
-    }
-
-    .square-left {
-        height: 50vh;
-        width: 50vw;
-        overflow: hidden;
-        margin: 1rem;
-        border-radius: .2rem;
-        background-color: $old-lace;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .square-right {
-        height: 50vh;
-        width: 50vw;
-        margin: 1rem;
-        overflow: hidden;
-        border-radius: .2rem;
-        background-color: lightslategray;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    // ----- Hover Cards ----- //
-
-    .hover-card-left {
-        background-color: $white;
-        height: 80%;
-        width: 70%;
-        border-radius: .1rem;
-        box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
-        animation: expandAndSpinHoverCard 3s;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .hover-card-right {
-        background-color: $white;
-        height: 80%;
-        width: 70%;
-        border-radius: .1rem;
-        box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
-        animation: expandAndSpinHoverCard 3s;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .hover-text {
-        height: 100%;
-        width: 100%;
-        animation: fadeInDelay;
-        animation-duration: 5s;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    h1 {
-        animation: fadeInDelay;
-        animation-duration: 5s;
-        font-family: 'Courgette', cursive;
-        font-size: 10vw;
-        text-shadow: 2px 2px lightslategray;
-    }
-
-    @keyframes fadeInDelay {
-        0% {
-            opacity: 0;
-        }
-
-        50% {
-            opacity: 0;
-        }
-
-        100% {opacity: 100%;}
-        
-    }
-
-    mat-divider {
-        width: 70vw;
-        height: .1vw;
-        background-color: $old-lace;
-        animation: expandLine;
-        animation-duration: 4s;
-        margin: 0;
-    }
-
-    @keyframes expandLine {
-        0% {
-            width: 0;
-        }
-        100% {
-            width: 70vw;
-        }
-        
-    }
+  }
 }

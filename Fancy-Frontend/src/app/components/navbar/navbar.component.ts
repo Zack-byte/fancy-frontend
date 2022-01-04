@@ -15,29 +15,43 @@ import { trigger, style, state, transition, animate } from '@angular/animations'
       transition(':leave', [
         animate('400ms ease-in', style({transform: 'translateY(-100%)'}))
       ])
+    ]),
+    trigger('fadeIn', [
+      transition(':enter', [
+        style({opacity: 0}),
+        animate('400ms ease-in', style({opacity: 1}))
+      ]),
+      transition(':leave', [
+        animate('400ms ease-in', style({opacity: 0}))
+      ])
     ])
+
 
   ]
 })
 export class NavbarComponent implements OnInit {
-  public toggle = true;
+  public showNav = false;
   public status = 'Enable';
-  public navIcon = 'fa-bars';
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  public switchIcons(): void {
-    this.toggle = !this.toggle;
-    
-    if( this.navIcon === 'fa-bars'){
-      this.navIcon = 'fa-times'
-    }
-    else {
-      this.navIcon = 'fa-bars'
-    }
+
+  public goToHome(): void {
+    console.log('gone home');
   }
 
+  public goToAbout(): void {
+    console.log('gone to about');
+  }
+
+  public goToProjects(): void {
+    console.log('gone to projects');
+  }
+
+  public toggleNavbar(): void {
+    this.showNav = !this.showNav;
+  }
 }

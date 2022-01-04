@@ -1,5 +1,9 @@
 import { animate, style, transition, trigger } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
+import * as $ from 'jquery';
+import VanillaTilt from 'vanilla-tilt';
+
+
 
 @Component({
   selector: 'app-home-page',
@@ -7,29 +11,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home-page.component.scss'],
   animations: [
     //----- Animations -----//
-    trigger('slideInLeft', [
-      transition(':enter', [
-        style({transform: 'translateX(-100%)'}),
-        animate('1000ms ease-in', style({transform: 'translateX(0%)'}))
-      ]),
-    ]),
-
-    trigger('slideInRight', [
-      transition(':enter', [
-        style({transform: 'translateX(100%)'}),
-        animate('1000ms ease-in', style({transform: 'translateX(0%)'}))
-      ]),
-    ]),
   ]
 })
 export class HomePageComponent implements OnInit {
 
-  public englishTitle = 'Hello | '
-  public japaneseTitle = ' | 你好'
-
   constructor() { }
 
   ngOnInit(): void {
-  }
+}
 
 }
