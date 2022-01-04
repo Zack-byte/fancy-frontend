@@ -1,3 +1,4 @@
+import { ProjectsPageModule } from './components/projects-page/projects-page.module';
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
@@ -15,8 +16,15 @@ const routes: Routes = [{
     // ----- HOME ----- //
     {
       path: 'home',
-      loadChildren: () => 
+      loadChildren: () =>
         import('./components/home-page/home-page.module').then((m) => m.HomePageModule)
+    },
+
+    // ----- PROJECTS ----- //
+    {
+      path: 'projects',
+      loadChildren: () =>
+        import('./components/projects-page/projects-page.module').then((m) => m.ProjectsPageModule)
     }
   ]
 }];

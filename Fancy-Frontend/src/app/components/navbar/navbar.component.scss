@@ -15,6 +15,7 @@
         padding-left: 0.6rem;
         margin-top: 0.5rem;
         margin-left: 0.5rem;
+        text-shadow: 0.2px 0.2px 5px black;
     }
 
     @keyframes arrowBounce {
@@ -48,10 +49,12 @@
     }
 
     .nav-base {
-      width: 30%;
       height: 90%;
+      max-width: 90%;
       margin-top: 1rem;
       display: flex;
+      padding-left: 3.5rem;
+      padding-right: 3.5rem;
       position: relative;
       border-radius: 30px;
       align-items: center;
@@ -61,6 +64,21 @@
       -moz-box-shadow:    1px 1px 10px #333;
       box-shadow:         1px 1px 10px #333;
     }
+    @media only screen and (max-width: 400px) {
+      .nav-base {
+        padding-left: 2rem;
+        padding-right: 2rem;
+      }
+    }
+    @media only screen and (max-width: 400px) and (max-height: 600px) {
+      .nav-base {
+        max-width: 70%;
+        padding-left: 2rem;
+        padding-right: 2rem;
+      }
+    }
+
+
 
     .nav-buttons {
       display: flex;

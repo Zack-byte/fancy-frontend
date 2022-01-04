@@ -10,6 +10,10 @@ import { MatIconRegistry } from '@angular/material/icon';
 import { ProfileIconModule } from './components/profile-icon';
 import { HomePageModule } from './components/home-page';
 import { NavbarModule } from './components/navbar';
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
+import { StoreRouterConnectingModule } from '@ngrx/router-store';
+import { ProjectsPageModule } from './components/projects-page';
 
 @NgModule({
   declarations: [
@@ -18,12 +22,16 @@ import { NavbarModule } from './components/navbar';
   imports: [
     BrowserModule,
     FontAwesomeModule,
-    AppRoutingModule, 
-    FooterModule, 
+    AppRoutingModule,
+    FooterModule,
     HomePageModule,
+    ProjectsPageModule,
     ProfileIconModule,
     BrowserAnimationsModule,
-    NavbarModule
+    NavbarModule,
+    StoreModule.forRoot({}, {}),
+    EffectsModule.forRoot([]),
+    StoreRouterConnectingModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

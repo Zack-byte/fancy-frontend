@@ -1,3 +1,4 @@
+import { AboutModule } from './../about/about.module';
 import { CommonModule } from "@angular/common";
 import { NgModule } from "@angular/core";
 import { MatDividerModule } from "@angular/material/divider";
@@ -13,10 +14,10 @@ export const routes: Routes = [
 ];
 
 @NgModule({
-    declarations: [HomePageComponent], 
+    declarations: [HomePageComponent],
 
     exports: [HomePageComponent],
 
-    imports: [CommonModule, RouterModule.forChild(routes), MatDividerModule],
+    imports: [CommonModule, RouterModule.forChild(routes), MatDividerModule, AboutModule],
 })
 export class HomePageModule {}

@@ -1,4 +1,17 @@
 <app-navbar></app-navbar>
+<div class="background-container">
+  <div class="blob-container">
+    <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" id="blobSvg">
+      <defs>
+        <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" style="stop-color: rgb(71, 188, 244);"></stop>
+          <stop offset="100%" style="stop-color: rgb(8, 40, 158);"></stop>
+        </linearGradient>
+      </defs>
+      <path id="blob" d="M407,281.5Q403,313,407,362Q411,411,375.5,439.5Q340,468,295,451Q250,434,204,453.5Q158,473,117,448.5Q76,424,61.5,379Q47,334,33,292Q19,250,38.5,210.5Q58,171,82,138.5Q106,106,135.5,75.5Q165,45,207.5,36.5Q250,28,293.5,34Q337,40,356.5,82Q376,124,397.5,152Q419,180,415,215Q411,250,407,281.5Z" fill="url(#gradient)"></path>
+    </svg>
+  </div>
+</div>
 <div class="body">
     <router-outlet></router-outlet>
 </div>

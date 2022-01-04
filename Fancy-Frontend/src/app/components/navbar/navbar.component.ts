@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { trigger, style, state, transition, animate } from '@angular/animations';
 import * as $ from 'jquery';
@@ -34,38 +35,41 @@ export class NavbarComponent implements OnInit {
   public showNav = false;
   public status = 'Enable';
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
 
 
   public goToHome(): void {
+    this.router.navigateByUrl('home');
     $([document.documentElement, document.body]).animate({
         scrollTop: $("#home-page").scrollTop
     }, 2000);
     this.resetButtons();
-    $("#home").css("background-color", "rgb(8, 40, 158)");
+    $("#home").css("background-color", "#47bcf4");
     $("#home").children().css("color", "white");
     $('#home').css("box-shadow", "inset 1px 1px 10px #333")
   }
 
   public goToAbout(): void {
+    this.router.navigateByUrl('home');
     $([document.documentElement, document.body]).animate({
         scrollTop: $("#home-page").scrollTop
     }, 2000);
     this.resetButtons();
-    $("#about").css("background-color", "rgb(8, 40, 158)");
+    $("#about").css("background-color", "#47bcf4");
     $("#about").children().css("color", "white");
     $('#about').css("box-shadow", "inset 1px 1px 10px #333")
   }
 
   public goToProjects(): void {
+    this.router.navigateByUrl('projects');
     $([document.documentElement, document.body]).animate({
         scrollTop: $("#home-page").scrollTop
     }, 2000);
     this.resetButtons();
-    $("#projects").css("background-color", "rgb(8, 40, 158)");
+    $("#projects").css("background-color", "#47bcf4");
     $("#projects").children().css("color", "white");
     $('#projects').css("box-shadow", "inset 1px 1px 10px #333")
   }
@@ -75,7 +79,7 @@ export class NavbarComponent implements OnInit {
         scrollTop: $("#home-page").scrollTop
     }, 2000);
     this.resetButtons();
-    $("#contact").css("background-color", "rgb(8, 40, 158)");
+    $("#contact").css("background-color", "#47bcf4");
     $("#contact").children().css("color", "white");
     $('#contact').css("box-shadow", "inset 1px 1px 10px #333")
   }
@@ -86,7 +90,7 @@ export class NavbarComponent implements OnInit {
 
   public resetButtons(): void {
     $('.nav-button').css("background-color", "white");
-    $('.nav-button').children().css("color", "rgb(8, 40, 158)");
+    $('.nav-button').children().css("color", "#47bcf4");
     $('.nav-button').css("box-shadow", "none")
   }
 }
