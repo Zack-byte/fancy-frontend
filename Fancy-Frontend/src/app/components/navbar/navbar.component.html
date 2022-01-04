@@ -3,6 +3,7 @@
   <div *ngIf="showNav" [@slideInOut] class="nav-base">
     <div class="nav-buttons">
       <button
+        id="home"
         class="nav-button"
         matTooltip="Home"
         matTooltipClass="tooltip"
@@ -12,6 +13,7 @@
       </button>
 
       <button
+        id="about"
         class="nav-button"
         matTooltipClass="tooltip"
         matTooltip="About"
@@ -22,6 +24,7 @@
       </button>
 
       <button
+        id="projects"
         class="nav-button"
         matTooltip="Projects"
         matTooltipClass="tooltip"
@@ -31,12 +34,22 @@
       </button>
 
       <button
+        id="contact"
         class="nav-button"
-        matTooltip="Minimize Nav"
+        matTooltip="Contact Me"
+        matTooltipClass="tooltip"
+        (click)="goToContact()"
+      >
+        <mat-icon fontSet="fas" color="primary" fontIcon="fa-phone-alt"></mat-icon>
+      </button>
+
+      <button
+        class="minimize-button"
+        matTooltip="Minimize"
         matTooltipClass="tooltip"
         (click)="toggleNavbar()"
       >
-        <mat-icon fontSet="fas" color="primary" fontIcon="fa-compress-arrows-alt"></mat-icon>
+        <mat-icon fontSet="fas" color="primary" fontIcon="fa-compress-alt"></mat-icon>
       </button>
     </div>
   </div>
